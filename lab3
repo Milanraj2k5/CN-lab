@@ -68,3 +68,15 @@ $ns at 25.0 "$ftp0 stop"
 $ns at 25.1 "$ftp1 stop"
 $ns at 25.2 "finish"
 $ns run
+
+//s3.awk//
+BEGIN {
+}
+{
+ if($6 =="cwnd_")
+{
+printf("%f\t%f\n",$1,$7);
+}
+}
+END{
+}
